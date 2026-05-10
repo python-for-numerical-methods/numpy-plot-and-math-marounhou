@@ -1,17 +1,17 @@
-import numpy as np
-
-
 def normalize_array(input_array):
   min_val = np.min(input_array)
   max_val = np.max(input_array)
-
-  # Handle the case where all values are equal
-  if max_val == min_val:
+  
+  range_val = max_val - min_val
+  
+  if range_val == 0:
+    # If all values are the same, return an array of zeros of the same shape
     return np.zeros_like(input_array, dtype=float)
+  else:
+    # Normalize the array using vectorized operations
+    normalized_array = (input_array - min_val) / range_val
+    return normalized_array
 
-  # Apply the normalization formula
-  normalized_array = (input_array - min_val) / (max_val - min_val)
-  return normalized_array
 
 
 if __name__ == "__main__":
