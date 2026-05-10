@@ -1,7 +1,5 @@
 import numpy as np
 
-import numpy as np
-
 # מקרה רגיל
 array1 = np.array([1, 2, 3, 4, 5])
 normalized1 = normalize_array(array1)
@@ -25,6 +23,8 @@ array4 = np.array([7])
 normalized4 = normalize_array(array4)
 print(f"מערך מקורי: {array4}")
 print(f"מערך מנורמל: {normalized4}\n")
+
+
 if __name__ == "__main__":
     # כאן הסטודנטים יכולים להריץ בדיקה עצמית מהירה
     test_data = [10, 20, 30, 40, 50]
